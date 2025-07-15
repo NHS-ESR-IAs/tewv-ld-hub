@@ -1,0 +1,1440 @@
+<!--
+==========================================================
+TABLE OF CONTENTS
+==========================================================
+1.  Navigation         - ID: nhs-header
+2.  Home Page          - ID: home
+3.  Guides Page        - ID: guides
+4.  FAQs Page          - ID: faqs
+5.  Catalogue Page     - ID: CC
+6.  Stat & Mand Page   - ID: SaMT
+7.  Non-Stat & Mand    - ID: NSaMT
+8.  EPR Training       - ID: EPR
+9.  Support            - ID: SUP
+10. Medical Education  - ID: ME
+==========================================================
+-->
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tees, Esk and Wear Valleys Learning and Development Hub</title>
+</head>
+
+<body>
+  <div class="logo-wrapper">
+    <img src="https://assets.codepen.io/8889025/TEWV_Logo_White3.png" alt="TEWV Logo" />
+  </div>
+  <!-- ======================================================
+=                     NAVIGATION SECTION                  =
+========================================================= -->
+  <header class="nhs-header">
+    <div class="container">
+      <div class="row">
+        <!-- <div class="banner-wrapper">
+          <img src="https://assets.codepen.io/8889025/TEWV_Banner.png" class="Banner_image" alt="Welcome Hub Banner">
+          <div class="banner-text-overlay">
+            <h1>Tees, Esk and Wear Valleys</h1>
+          </div>
+-->
+      </div>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="navbar-toggler-icon">
+          </button>
+          <div class="collapse navbar-collapse" id="navMenu">
+            <!-- <div class="logo-container">
+                <img src="https://assets.codepen.io/8889025/ESR_Logo.jpg" class="logo esr" />
+                <img src="https://assets.codepen.io/8889025/NHS_Logo.svg" class="logo nhs" />
+              </div>-->
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item"><a class="nav-link" onclick="showPage('home')">Home</a></li>
+              <li class="nav-item"><a class="nav-link" onclick="showPage('guides')">Guides</a></li>
+              <li class="nav-item"><a class="nav-link" onclick="showPage('faqs')">FAQs</a></li>
+              <!-- <li class="nav-item"><a class="nav-link" onclick="showPage('SUP')">Support Request</a></li>-->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="contactDropdown" role="button" data-bs-toggle="dropdown">
+                  <!--onclick="showPage('CC');"-->
+                  Catalogue
+                </a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-submenu">
+                    <a class="dropdown-item" onclick="showPage('SaMT');">Statutory and Mandatory Training</a>
+                    <a class="dropdown-item" onclick="showPage('NSaMT');">Non Statutory and Mandatory Training</a>
+                    <!--<a class="dropdown-item" onclick="showPage('EPR');">EPR Training</a>-->
+                  </li>
+                  <!--
+              <li class="dropdown-submenu">
+                <a class="dropdown-item submenu-toggle" onclick="showPage('contact'); showSubSection('emergency')">Emergency</a>
+                <ul class="submenu dropdown-menu">
+                  <li><a class="dropdown-item" onclick="showPage('contact'); showSubSection('urgent')">Urgent Care</a></li>
+                  <li><a class="dropdown-item" onclick="showPage('contact'); showSubSection('ambulance')">Ambulance Services</a></li>
+                </ul>
+              </li>
+-->
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" onclick="showPage('ME')">Medical Education</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Combined Toolbar and Search -->
+      <div class="container mt-3">
+        <div class="row align-items-center g-2">
+          <!-- Search Bar (left, stretches as needed) -->
+          <div class="col">
+            <input type="text" id="searchInput" class="form-control" placeholder="Search the site" onkeyup="searchPages()">
+          </div>
+          <!-- Control Panel (right, auto-width) 
+            <div class="col-auto">
+              <div class="d-flex flex-wrap align-items-center gap-2 control-toolbar p-2 rounded">
+                <!-- Theme Selector 
+                <label for="themeSelector" class="visually-hidden">Choose Theme</label>
+                <select id="themeSelector" class="form-select form-select-sm w-auto">
+                  <option value="blue">💙 NHS Blue</option>
+                  <option value="green">💚 NHS Green</option>
+                  <option value="grey">🩶 NHS Grey</option>
+                  <option value="pink">💗 NHS Pink</option>
+                  <option value="purple">💜 NHS Purple</option>
+                  <option value="red">❤️ NHS Red</option>
+                  <option value="yellow">💛 NHS Yellow</option>
+                  <option value="calm">🌫 Calm Grey</option>
+                  <option value="contrast">⚠️ High Contrast</option>
+                </select>
+                <!-- Text Scaling 
+                <div class="btn-group btn-group-sm" role="group" aria-label="Text Size">
+                  <button onclick="setTextSize('scale-small')" class="btn btn-outline-secondary">A–</button>
+                  <button onclick="setTextSize('scale-medium')" class="btn btn-outline-secondary">A</button>
+                  <button onclick="setTextSize('scale-large')" class="btn btn-outline-secondary">A+</button>
+                  <button onclick="setTextSize('scale-xlarge')" class="btn btn-outline-secondary">A++</button>
+                </div>
+                <!-- Dark Mode 
+                <button id="toggleDark" class="btn btn-sm btn-outline-primary">
+                  🌙 Dark Mode
+                </button>-->
+        </div>
+      </div>
+    </div>
+    </div>
+  </header>
+  <!-- <div class="banner-wrapper">
+    <img src="https://assets.codepen.io/8889025/MY-Logo-Banner.png" class="Banner_image" alt="Welcome Hub Banner">
+    <div class="banner-text-overlay">
+      <h2>Learning and Development Hub</h2>
+    </div>-->
+  </div>
+  <!-- ======================================================
+=                     HOME PAGE SECTION                   =
+========================================================= -->
+  <div id="home" class="page active">
+    <!-- 
+<div class="container">
+      <div class="banner-wrapper">
+        <img src="https://assets.codepen.io/8889025/TEWV_Banner.png" class="Banner_image" alt="Welcome Hub Banner">
+        <div class="banner-text-overlay">
+          <h2>Learning and Development Hub</h2>
+        </div>
+      </div>
+-->
+    <div class="row">
+      <!-- <div class="col-md-4 gradient-col d-flex align-items-center justify-content-center">
+          <h3 class="gradient-text">Learning and Development Hub</h3>
+        </div>
+<div class="col-md-8">
+-->
+      <div class="col">
+        <h4>Welcome to the Learning and Development Hub</h4>
+        <p>The hub provides access to a range of information to support personal learning and development needs, guidance on using ESR Learning Management and a catalogue of available training courses.</p>
+        <p>We hope you find this page useful and informative. Please feel free to explore the different sections and links. If you have any feedback or suggestions, please let us know. We value your input and appreciate your dedication to providing quality health care services. Thank you for being part of our team.</p>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- ======================================================
+=                     GUIDES PAGE SECTION                 =
+========================================================= -->
+  <div id="guides" class="page">
+
+    <div class="row">
+
+      <div class="col">
+        <h4>ESR Learning Management Guidance</h4>
+        <p>This section provides access to user guides on how to use the ESR Learning Management system.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md">
+        <!-- Section 1 -->
+        <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#complianceModal">
+          How to use the My Compliance Portlet to manage your mandatory training
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="complianceModal" tabindex="-1" aria-labelledby="complianceModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+              <!-- Themed Header -->
+              <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                <h5 class="modal-title mb-0" id="complianceModalLabel">How to use the My Compliance Portlet</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="card-body">
+                <iframe src="https://scribehow.com/embed/PIG4DQZLRr6NG346ToihJg" width="100%" height="800" allow="fullscreen" style="aspect-ratio: 16 / 12; border: 0; min-height: 480px"></iframe>
+                </iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Section 2 -->
+        <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#outstandingTrainingModal">
+          Identifying Training that is Outstanding
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="outstandingTrainingModal" tabindex="-1" aria-labelledby="outstandingTrainingModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+              <!-- Themed Header -->
+              <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                <h5 class="modal-title mb-0" id="outstandingTrainingModalLabel">Identifying Training that is Outstanding</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="card-body">
+                <iframe src="https://scribehow.com/shared/PIG4DQZLRr6NG346ToihJg?scrollToActionId=f250e1dd" width="100%" height="800" allow="fullscreen" style="aspect-ratio: 16 / 12; border: 0; min-height: 480px;">
+                </iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Section 3 -->
+        <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#enrolmentModal">
+          Enrolling onto e-Learning Courses
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="enrolmentModal" tabindex="-1" aria-labelledby="enrolmentModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+              <!-- Themed Header -->
+              <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                <h5 class="modal-title mb-0" id="enrolmentModalLabel">Enrolling onto e-Learning Courses</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="card-body">
+                <iframe src="https://scribehow.com/viewer/PIG4DQZLRr6NG346ToihJg?scrollToActionId=426c0f0f" width="100%" height="800" allow="fullscreen" style="aspect-ratio: 16 / 12; border: 0; min-height: 480px;">
+                </iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Section 4 -->
+        <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#playCoursesModal">
+          Playing e-Learning Courses you are Enrolled On
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="playCoursesModal" tabindex="-1" aria-labelledby="playCoursesModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+              <!-- Themed Header -->
+              <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                <h5 class="modal-title mb-0" id="playCoursesModalLabel">Playing e-Learning Courses you are Enrolled On</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="card-body">
+                <iframe src="https://scribehow.com/viewer/PIG4DQZLRr6NG346ToihJg?scrollToActionId=4c19c4b1" width="100%" height="800" allow="fullscreen" style="aspect-ratio: 16 / 12; border: 0; min-height: 480px;">
+                </iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Section 5 -->
+        <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#classroomTrainingModal">
+          Enrolling onto Classroom Training
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="classroomTrainingModal" tabindex="-1" aria-labelledby="classroomTrainingModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+              <!-- Themed Header -->
+              <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                <h5 class="modal-title mb-0" id="classroomTrainingModalLabel">Enrolling onto Classroom Training</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="card-body">
+                <iframe src="https://scribehow.com/viewer/PIG4DQZLRr6NG346ToihJg?scrollToActionId=17ab0147" width="100%" height="800" allow="fullscreen" style="aspect-ratio: 16 / 12; border: 0; min-height: 480px;">
+                </iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Section 6 -->
+        <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#bookedClassesModal">
+          Viewing Details of Classes you are Booked On
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="bookedClassesModal" tabindex="-1" aria-labelledby="bookedClassesModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+              <!-- Themed Header -->
+              <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                <h5 class="modal-title mb-0" id="bookedClassesModalLabel">Viewing Details of Classes you are Booked On</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="card-body">
+                <iframe src="https://scribehow.com/viewer/PIG4DQZLRr6NG346ToihJg?scrollToActionId=1fda98e6" width="100%" height="800" allow="fullscreen" style="aspect-ratio: 16 / 12; border: 0; min-height: 480px;">
+                </iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End of Sections -->
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- ======================================================
+=                     FAQS PAGE SECTION                   =
+========================================================= -->
+  <div id="faqs" class="page">
+    <div class="row">
+      <div class="col">
+        <h4>ESR Learning Management FAQs</h4>
+        <p>This section provides access to Frequently Asked Questions when using the ESR Learning Management system.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md">
+        <!-- Section 1 -->
+        <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#complianceIssueModal">
+          I have completed some training and my compliance has not been updated, what can I do?
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="complianceIssueModal" tabindex="-1" aria-labelledby="complianceIssueModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Themed Header -->
+              <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                <h5 class="modal-title mb-0" id="complianceIssueModalLabel">I have completed some training and my compliance has not been updated</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="card-body">
+                <p>E-learning - Please ensure you have completed the E-Learning through a learning certificate, and you have clicked the house button to exit the course. Face to face/MS Teams - Please ensure you have waited 10 working days, for class sessions to be updated as these are updated manually. If your competencies has still not been updated please contact Training &amp; Education on <a href="mailto:tewv.course.booking@nhs.net">tewv.course.booking@nhs.net</a></p>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Section 2 -->
+        <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#externalTrainingModal">
+          Is mandatory training that is completed in another organisation recognised by TEWV?
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="externalTrainingModal" tabindex="-1" aria-labelledby="externalTrainingModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Themed Header -->
+              <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                <h5 class="modal-title mb-0" id="externalTrainingModalLabel">
+                  Is mandatory training completed in another organisation recognised by TEWV?
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="card-body">
+                <p>Some training may differ from trust to trust however most of the training should be transferred when joining via the IAT process. If any training is incorrect or hasn't been transferred please email <a href="mailto:tewv.course.booking@nhs.net">tewv.course.booking@nhs.net</a> and we'll investigate this further or process any documentation, screenshots or learning records manually.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Section 3 -->
+        <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#certificationExpiredModal">
+          What do I do if my certification subscription status is "expired"?
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="certificationExpiredModal" tabindex="-1" aria-labelledby="certificationExpiredModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Themed Header -->
+              <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                <h5 class="modal-title mb-0" id="certificationExpiredModalLabel">
+                  What do I do if my certification subscription status is "expired"?
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="card-body">
+                <p>Once your certification has expired you will need to renew the competency, if you're struggling to access this or have any queries please email <a href="mailto:tewv.course.booking@nhs.net">tewv.course.booking@nhs.net</a>.</p>
+
+                <p>Please ensure to complete all training shortly after you have initially accessed the course otherwise the competency could expire in the middle of you completing the training and entirely reset your progress. If this has occurred your line manager will have to email Education &amp; Training to confirm you have completed all sections of the training.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Section 4 -->
+        <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#incorrectRequirementModal">
+          What do I do if I believe the 'My Compliance' portlet is showing the incorrect requirement for my role, including requirements that are missing.
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="incorrectRequirementModal" tabindex="-1" aria-labelledby="incorrectRequirementModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Themed Header -->
+              <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                <h5 class="modal-title mb-0" id="incorrectRequirementModalLabel">
+                  My Compliance Portlet Showing Incorrect Requirements
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="card-body">
+                <p>Email <a href="mailto:tewv.course.booking@nhs.net">tewv.course.booking@nhs.net</a> with the details of the incorrect or missing requirement so they can review them on your behalf.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Section 5 -->
+        <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#esrIicMismatchModal">
+          My compliance is showing as green in ESR but red in IIC.
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="esrIicMismatchModal" tabindex="-1" aria-labelledby="esrIicMismatchModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Themed Header -->
+              <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                <h5 class="modal-title mb-0" id="esrIicMismatchModalLabel">
+                  Compliance Mismatch Between ESR and IIC
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="card-body">
+                <p>If you are showing as green in your ESR matrix and red in the IIC, this could mean that the IIC has not updated or the requirement has not been added for you in the IIC. Please first allow three working days following completion of training for the IIC to update. If this has not updated, please log a call through the Service Desk portal querying why your competence has not updated. Please ensure in the call you state that ESR is showing as green. To log the call please click below Self Service Portal (need to embed link here) .</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Section 6 -->
+        <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#playButtonIssueModal">
+          Greyed out or missing 'Play' button - How to access the course in a different way
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="playButtonIssueModal" tabindex="-1" aria-labelledby="playButtonIssueModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Themed Header -->
+              <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                <h5 class="modal-title mb-0" id="playButtonIssueModalLabel">
+                  Greyed Out or Missing ‘Play’ Button
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="card-body">
+                <ol>
+                  <li>On your ESR Homepage click the 'My Compliance' on the Learning and Development Portlet select the course and click magnified glass.</li>
+                  <li>If not subscribe to the certification click 'Details' and click 'Subscribe' and Enrol on the course.</li>
+                  <li>You will be directed to the next page where you will have to click 'Enrol' onto the course modules.</li>
+                  <li>If the Green play button is still unavailable click the 'Select an action' drop-down menu and click 'Play' if there is no option to play click the title of the module.</li>
+                  <li>Once you've clicked the title of the module another 'Select an action' drop-down menu will appear which may also contain the 'Play' option.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End of Sections -->
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- ======================================================
+=                     CATALOGUE SECTION                   =
+========================================================= 
+  <div id="CC" class="page">
+    <div class="row">
+      <div class="col">
+        <h4>Course Catalogue</h4>
+        <p>This section provides access to courses you can book via ESR. The categories are listed below.</p>
+        <button aria-expanded="false" class="btn btn-primary btn-block" onclick="showPage('SaMT');">Mandatory and Statutory Training</button>
+        <button aria-expanded="false" class="btn btn-primary btn-block" onclick="showPage('NSaMT');">Non Mandatory and Statutory Training</button>
+        <!--<button aria-expanded="false" class="btn btn-primary btn-block" onclick="showPage('EPR');">EPR Training</button>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>-->
+  <!-- ======================================================
+=            STATUTORY & MANDATORY TRAINING PAGE          =
+========================================================= -->
+  <div id="SaMT" class="page">
+    <div class="row">
+      <div class="col">
+        <h4>Statutory and Mandatory Training</h4>
+        <p>This section provides access to courses you can book via ESR. All training that you are required to complete will be showing in My Compliance on the ESR portal. Please use the guides to show you how to play these courses.</p>
+        <!-- <button aria-expanded="false" class="btn btn-primary btn-block" onclick="showPage('SaMT');">Mandatory and Statutory Training</button>
+          <button aria-expanded="false" class="btn btn-primary btn-block" onclick="showPage('NSaMT');">Non Mandatory and Statutory Training</button>
+          <button aria-expanded="false" class="btn btn-primary btn-block" onclick="showPage('EPR');">EPR Training</button>-->
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md">
+        <!-- Trigger Button -->
+        <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#blsModal">
+          <h5>Basic Life Support (BLS)
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="blsModal" tabindex="-1" aria-labelledby="blsModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Themed Header -->
+              <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                <h5 class="modal-title mb-0" id="blsModalLabel">Basic Life Support (BLS)</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="card-body">
+                <p><b>Who should attend:</b> For all staff who have access to emergency response bag and a duty to respond.</p>
+                <p><b>Learning Method:</b> Face to face and competency assessment (3 hours 30 minutes).</p>
+                <p><b>Additional Information:</b> This Training course covers both the practical and theory-based elements of Basic Life Support. This Course is required for all Staff who has a duty to respond and have access to the emergency response bag.</p>
+                <p><b>How to book: </b><a class="btn btn-primary" href="#" onclick="openPopup('https://intranet.tewv.nhs.uk/training-centre');" role="button">BOOK NOW</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Trigger Button -->
+        <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#cprModal">
+          <h5>Cardiopulmonary Resuscitation (CPR)
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="cprModal" tabindex="-1" aria-labelledby="cprModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Themed Header -->
+              <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                <h5 class="modal-title mb-0" id="cprModalLabel">Cardiopulmonary Resuscitation (CPR)</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="card-body">
+                <p><b>Who should attend:</b> For all staff who don't have access to emergency response bag but have a duty to respond.</p>
+                <p><b>Learning Method:</b> Face to face and competency assessment (1 hour).</p>
+                <p><b>Additional Information:</b> CPR is a combination of artificial ventilation, chest compressions, the aim of which is to maintain effective ventilation and circulation until the arrival of the emergency services as this would help prevent irreversible brain damage and death.</p>
+                <p><b>How to book:</b> <a class="btn btn-primary" href="#" onclick="openPopup('https://my-epro.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&amp;resp_id=-1&amp;resp_appl_id=-1&amp;security_group_id=0&amp;lang_code=US&amp;oas=ieezpmAluSvEhOZ7uIn4Gg..&amp;params=gJMzCV5h6nYJUibUjL0TTyNe2uEj51l8jeOD7qAdFlZYJ0JzYYTwfYn5cQSFaAVWck7VP.Fp0WWX1W2odyMoVN92Ku1Y3wVqwWyfQGtLMwY');" role="button">BOOK NOW</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Trigger Button -->
+        <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#dataSecurityModal">
+          <h5>Data Security Awareness
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="dataSecurityModal" tabindex="-1" aria-labelledby="dataSecurityModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Themed Header -->
+              <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                <h5 class="modal-title mb-0" id="dataSecurityModalLabel">Data Security Awareness</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="card-body">
+                <p><strong>Who should attend:</strong> All staff</p>
+                <p><strong>Learning Method:</strong> e-Learning (30 minutes)</p>
+                <p><strong>Refresher Period:</strong> 1 year</p>
+                <p><strong>Additional Information:</strong> All new staff should complete this training within their first 3 months of starting. <em>Note: This must be completed to gain access to System One.</em></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Trigger Button -->
+        <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#dementiaModal">
+          <h5>Dementia
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="dementiaModal" tabindex="-1" aria-labelledby="dementiaModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Themed Header -->
+              <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                <h5 class="modal-title mb-0" id="dementiaModalLabel">Dementia Training Overview</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="card-body">
+                <h5>Level 1</h5>
+                <p><b>Who should attend:</b> Clinical and non clinical staff who don¿t come into contact with patients with dementia</p>
+                <p><b>Learning Method:</b> Video (50 minutes)</p>
+                <p><b>Refresher Period:</b> One off, no renewal</p>
+                <p><b>Additional Information:</b> All new staff should watch the video within the first 3 months of their start date.</p>
+                <hr />
+                <h5>Level 2</h5>
+                <p><b>Who should attend:</b> Relevant to all health and care staff in settings where they are likely to have regular contact with people living with dementia, regardless of banding.</p>
+                <p><b>Learning Method:</b> e-Learning (1 hour 50 minutes)</p>
+                <p><b>Refresher Period:</b> 3 years</p>
+                <p><b>Additional Information:</b> All new staff should complete this training within their first 3 months of their start date.</p>
+                <hr />
+                <h5>Level 2 - refresher</h5>
+                <p><b>Who should attend:</b> The refresher course is for staff who have already undertaken the Dementia Level 2 Initial eLearning</p>
+                <p><b>Learning Method:</b> e-Learning (1 hour 40 minutes)</p>
+                <p><b>Refresher Period:</b> 3 years</p>
+                <p><b>Additional Information:</b> This refresher course will give staff a recap on the key features of dementia and what to consider when delivering care to those living with the condition.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Trigger Button -->
+        <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#equalityModal">
+          <h5>Equality, Diversity and Human Rights
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="equalityModal" tabindex="-1" aria-labelledby="equalityModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Themed Header -->
+              <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                <h5 class="modal-title mb-0" id="equalityModalLabel">Equality, Diversity and Human Rights</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="card-body">
+                <p><b>Who should attend:</b> All Staff</p>
+                <p><b>Learning Method:</b> e-Learning (30 minutes)</p>
+                <p><b>Refresher Period:</b> 3 years</p>
+                <p><b>Additional Information:</b> All new staff should complete this training within their first 3 months of their start date.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Trigger Button -->
+        <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#fireSafetyModal">
+          <h5>Fire Safety
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="fireSafetyModal" tabindex="-1" aria-labelledby="fireSafetyModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Themed Header -->
+              <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                <h5 class="modal-title mb-0" id="fireSafetyModalLabel">Fire Safety</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="card-body">
+                <h5>All staff except clinical staff based at Hannah House and Wharfedale (Heather and Bilberry wards)</h5>
+                <p><b>Who should attend:</b> All Staff</p>
+                <p><b>Learning Method:</b> Induction training must be done via Face to face or virtual class (1 - 2 hours), refresher training can then be completed by face to face, virtual class (1 - 2 hours) or e-learning (30 minutes)</p>
+                <p><b>Refresher Period:</b> 2 years</p>
+                <p><b>Additional Information:</b> All new staff should book on a class appropriate to their role within the first 3 months of their start date.</p>
+                <hr />
+                <h5>For all clinical staff based at Hannah House and Wharfedale (Heather and Bilberry wards)</h5>
+                <p> </p>
+                <p><b>Who should attend:</b> Staff on Inpatient Units</p>
+                <p><b>Learning Method:</b> Face to face (2 hours)</p>
+                <p><b>Refresher Period:</b> 1 year</p>
+                <p><b>Additional Information:</b> Sessions will be arranged by the fire officers in conjunction with the ward managers.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Trigger Button -->
+        <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#fireSafetyModal">
+          <h5>Health, Safety and Welfare
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="fireSafetyModal" tabindex="-1" aria-labelledby="fireSafetyModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Themed Header -->
+              <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                <h5 class="modal-title mb-0" id="fireSafetyModalLabel">Fire Safety</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="card-body">
+                <p><b>Who should attend:</b> All Staff</p>
+                <p><b>Learning Method:</b> e-Learning (30 minutes)</p>
+                <p><b>Refresher Period:</b> 3 years</p>
+                <p><b>Additional Information:</b> All new staff should complete this training within their first 3 months of their start date.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Trigger Button -->
+        <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#infectionModal">
+          <h5>Infection Prevention and Control
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="infectionModal" tabindex="-1" aria-labelledby="infectionModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Themed Header -->
+              <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                <h5 class="modal-title mb-0" id="infectionModalLabel">Infection Prevention and Control</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="card-body">
+                <h5>Level 1 - Non Clinical Staff</h5>
+                <p><b>Who should attend:</b> Non Clinical Staff</p>
+                <p><b>Learning Method:</b> e-Learning (30 minutes)</p>
+                <p><b>Refresher Period:</b> 3 years</p>
+                <p><b>Additional Information:</b> All new staff should complete this training within their first 3 months of their start date.</p>
+                <hr />
+                <h5>Level 2 - Clinical Staff (excludes 'invasive procedures')</h5>
+                <p><b>Who should attend:</b> Clinical Staff (excludes 'invasive procedures')</p>
+                <p><b>Learning Method:</b> e-Learning (1 hour)</p>
+                <p><b>Refresher Period:</b> 2 years</p>
+                <p><b>Additional Information:</b> All new staff should complete this training within their first 3 months of their start date.</p>
+                <hr />
+                <h5>Level 2 - Domestic Caretakers</h5>
+                <p><b>Who should attend:</b> Domestic Caretakers</p>
+                <p><b>Learning Method:</b> e-Learning (45 Minutes)</p>
+                <p><b>Refresher Period:</b> 2 years</p>
+                <p><b>Additional Information:</b> All new staff should complete this training within their first 3 months of their start date.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Trigger Button -->
+        <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#mentalCapacityModal">
+          <h5>Mental Capacity Act
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="mentalCapacityModal" tabindex="-1" aria-labelledby="mentalCapacityModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Themed Header -->
+              <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                <h5 class="modal-title mb-0" id="mentalCapacityModalLabel">Mental Capacity Act</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="card-body">
+                <p><b>Who should attend:</b> Clinical staff who are required to undertake Safeguarding Adults at Risk training</p>
+                <p><b>Learning Method:</b> virtual classrom (2 hours) or e-Learning (30 minutes)</p>
+                <p><b>Refresher Period:</b> 3 years</p>
+                <p><b>Additional Information:</b> All new staff should book on a class or eLearning within the first 3 months of their start date.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Trigger Button -->
+        <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#movingHandlingModal">
+          <h5>Moving and Handling
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="movingHandlingModal" tabindex="-1" aria-labelledby="movingHandlingModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Themed Header -->
+              <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                <h5 class="modal-title mb-0" id="movingHandlingModalLabel">Moving and Handling</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="card-body">
+                <h5>Level 1</h5>
+                <p><b>Who should attend:</b> Non clinical admin and support staff</p>
+                <p><b>Learning Method:</b> e-Learning (30 minutes)</p>
+                <p><b>Refresher Period:</b> 3 years</p>
+                <p><b>Additional Information:</b> All new staff should complete this training within their first 3 months of their start date.</p>
+                <hr />
+                <h5>Inanimate Loads for TEWV Equipment Service Staff</h5>
+                <p><b>Who should attend:</b> TEWV Equipment Service Staff</p>
+                <p><b>Learning Method:</b> e-Learning (30 minutes) and face to face (3 hours)</p>
+                <p><b>Refresher Period:</b> 2 years</p>
+                <p><b>Additional Information:</b>For TEWV Equipment Service staff only. Organised directly with LES.</p>
+                <hr />
+                <h5>Level 2 - Clinical staff only who move and handle people at a low level (without the use of additional / mechanical equipment)</h5>
+                <p><b>Who should attend:</b> All clinical staff who do NOT directly handle people but come into contact with people as part of their job role, for example dieticians, health visitors, MSK physiotherapists, school nurses, nursery nurses, podiatry etc.</p>
+                <p><b>Learning Method:</b> e-Learning (1 hour)</p>
+                <p><b>Refresher Period:</b> 2 years</p>
+                <p><b>Additional Information:</b> All new staff should complete this training within their first 3 months of their start date. This online Level 2 package was created in the response to the Covid pandemic.This is for staff groups who move and handle people at a low level (i.e. without the use of additional equipment). These staff groups should complete the four Level 2 eLearning modules until further notice. It is anticipated this group will return to face-to-face training at that point this online package will be removed.</p>
+                <hr />
+                <h5>Level 2 - Clinical staff who move and handle patients at a high level (using additional/mechanical of equipment).</h5>
+                <p><b>Who should attend:</b> Clinical staff who move and handle patients at a high level (using additional/mechanical of equipment).</p>
+                <p><b>Learning Method:</b> Face to face (Induction is 1 day, refresher is 1/2 day)</p>
+                <p><b>Refresher Period:</b> 2 years</p>
+                <p><b>Additional Information:</b> All new staff should complete this training within their first 3 months of their start date.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Trigger Button -->
+        <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#oliverMcGowanModal">
+          <h5>Oliver McGowan Mandatory Training on Learning Disability and Autism
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="oliverMcGowanModal" tabindex="-1" aria-labelledby="oliverMcGowanModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Themed Header -->
+              <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                <h5 class="modal-title mb-0" id="oliverMcGowanModalLabel">Oliver McGowan Mandatory Training</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="card-body">
+                <p><b>Who should attend:</b> All Staff</p>
+                <p><b>Learning Method:</b> e-Learning (1 hour 50 minutes)</p>
+                <p><b>Refresher Period:</b> 3 years</p>
+                <p><b>Additional Information:</b> All new staff should complete this training within their first 3 months of their start date.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Trigger Button -->
+        <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#patientSafetyModal">
+          <h5>Patient Safety
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="patientSafetyModal" tabindex="-1" aria-labelledby="patientSafetyModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Themed Header -->
+              <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                <h5 class="modal-title mb-0" id="patientSafetyModalLabel">Patient Safety</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="card-body">
+                <h5>Level 1</h5>
+                <p><b>Who should attend:</b> All Staff</p>
+                <p><b>Learning Method:</b> e-Learning (30 minutes)</p>
+                <p><b>Refresher Period:</b> One off, no renewal</p>
+                <p><b>Additional Information:</b> All new staff should complete this training within their first 3 months of their start date. The e-learning that staff will access is dependant upon their role.</p>
+                <hr />
+                <h5>Level 2</h5>
+                <p><b>Who should attend:</b> All Staff</p>
+                <p><b>Learning Method:</b> e-Learning (20 minutes)</p>
+                <p><b>Refresher Period:</b> One off, no renewal</p>
+                <p><b>Additional Information:</b> All new staff should complete this training within their first 3 months of their start date.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Trigger Button -->
+        <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#pressureUlcerModal">
+          <h5>Pressure Ulcer
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="pressureUlcerModal" tabindex="-1" aria-labelledby="pressureUlcerModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Themed Header -->
+              <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                <h5 class="modal-title mb-0" id="pressureUlcerModalLabel">Pressure Ulcer</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="card-body">
+                <p><b>Who should attend:</b> For clinical staff (Adults and Children) who come into contact with Pressure Ulcer</p>
+                <p><b>Learning Method:</b> e-Learning (30 minutes)</p>
+                <p><b>Refresher Period:</b> 2 years</p>
+                <p><b>Additional Information:</b> Role Dependant. New staff should complete eLearning module within the first 3 months of their start date.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Trigger Button -->
+        <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#preventTrainingModal">
+          <h5>Prevent Training
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="preventTrainingModal" tabindex="-1" aria-labelledby="preventTrainingModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Themed Header -->
+              <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                <h5 class="modal-title mb-0" id="preventTrainingModalLabel">Prevent Training</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="card-body">
+                <h5>Level 1</h5>
+                <p><b>Who should attend:</b> Non clincial staff including some non-caseload holding clinical staff e.g. Healthcare Support Workers</p>
+                <p><b>Learning Method:</b> e-Learning (30 minutes)</p>
+                <p><b>Refresher Period:</b> 3 years</p>
+                <p><b>Additional Information:</b> New staff should complete the relevant eLearning module within the first 3 months of their start date.</p>
+                <hr />
+                <h5>Level 3</h5>
+                <p><b>Who should attend:</b> All clinical staff</p>
+                <p><b>Learning Method:</b> e-Learning (30 minutes)</p>
+                <p><b>Refresher Period:</b> 3 years</p>
+                <p><b>Additional Information:</b> New staff should complete the relevant eLearning module within the first 3 months of their start date.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Trigger Button -->
+        <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#resuscitationModal">
+          <h5>Resuscitation
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="resuscitationModal" tabindex="-1" aria-labelledby="resuscitationModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Themed Header -->
+              <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                <h5 class="modal-title mb-0" id="resuscitationModalLabel">Resuscitation</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="card-body">
+                <p><b>Who should attend:</b> All Clinical Staff</p>
+                <p><b>Learning Method:</b> e-Learning and face to face (2 hours)</p>
+                <p><b>Refresher Period:</b> 1 year</p>
+                <p><b>Additional Information:</b> This learning certification is for clinical staff and covers both Adults and Paediatric resuscitation and Anaphylaxis. To gain annual competency you must firstly complete the e-Learning modules (000 Resuscitation Adult Level 2 and 000 Resuscitation Paediatric Level 2) and watch the 833 Anaphylaxis PowerPoint video. Please note to view the 833 Anaphylaxis video you need to download video to your PC. Following this you will need to book on a face to face class 833 Practical CPR Assessment within 3 months of completing your e-Learning.</p>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Trigger Button -->
+        <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#safeguardingAdultsModal">
+          <h5>Safeguarding Adults
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="safeguardingAdultsModal" tabindex="-1" aria-labelledby="safeguardingAdultsModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Themed Header -->
+              <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                <h5 class="modal-title mb-0" id="safeguardingAdultsModalLabel">Safeguarding Adults</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="card-body">
+                <h5>Level 1</h5>
+                <p><b>Who should attend:</b> All staff working in healthcare settings providing direct or indirect (telephone) services to adults at risk and/or carers.</p>
+                <p><b>Learning Method:</b> e-Learning (30 minutes)</p>
+                <p><b>Refresher Period:</b> 3 years</p>
+                <p><b>Additional Information:</b> All new staff should complete the eLearning module within the first 3 months of their start date.</p>
+                <p><b>Further staff gudiance:</b> All staff providing care/services to adults in their own homes; in care homes; in health centres; and in-patient units; clinical admin and reception staff; and all staff working predominantly with children and families.</p>
+                <hr />
+                <h5>Level 2</h5>
+                <p><b>Who should attend:</b> All clinical staff working with adult patients</p>
+                <p><b>Learning Method:</b> e-Learning (30 minutes)</p>
+                <p><b>Refresher Period:</b> 3 years</p>
+                <p><b>Additional Information:</b> All new staff should complete the eLearning module within the first 3 months of their start date.</p>
+                <hr />
+                <h5>Level 3</h5>
+                <p><b>Who should attend:</b> Registered health care staff who engage in assessing, planning, intervening and evaluating the needs of adults where there are safeguarding concerns (as appropriate to role).</p>
+                <p><b>Learning Method:</b> Virtual Classroom (3 hours initial training followed by 1.5 hours refresher training)</p>
+                <p><b>Refresher Period:</b> 3 years</p>
+                <p><b>Additional Information:</b> All new staff should complete the eLearning module within the first 3 months of their start date.</p>
+                <p><b>Further staff gudiance:</b> This includes safeguarding professionals, medical staff, registered nurses, urgent and unscheduled care staff, psychologists, psychotherapists, adult learning/intellectual disability practitioners, health professionals working in substance misuse, services, paramedics, sexual health staff, care home managers, health visitors, midwives, dentists, pharmacists with a lead role in adult protection (as appropriate to their role).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Trigger Button -->
+        <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#safeguardingChildrenModal">
+          <h5>Safeguarding Children
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="safeguardingChildrenModal" tabindex="-1" aria-labelledby="safeguardingChildrenModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Themed Header -->
+              <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                <h5 class="modal-title mb-0" id="safeguardingChildrenModalLabel">Safeguarding Children</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="card-body">
+                <h5>Level 1</h5>
+                <p><b>Who should attend:</b> All clinical and non-clincial staff working in healthcare settings who have no direct contact with children and young people.</p>
+                <p><b>Learning Method:</b> e-Learning (1 hour)</p>
+                <p><b>Refresher Period:</b> 3 years</p>
+                <p><b>Additional Information:</b> All new staff should complete the eLearning module within the first 3 months of their start date.</p>
+                <hr />
+                <h5>Level 2</h5>
+                <p><b>Who should attend:</b> For staff providing care or services to children and families in all setting to include for example Dentists, Audiologist, Nurses, Health Support Worker, Allied Health Care Professionals in Adult Services</p>
+                <p><b>Learning Method:</b> e-Learning (1 hour)</p>
+                <p><b>Refresher Period:</b> 3 years</p>
+                <p><b>Additional Information:</b> All new staff should complete the eLearning module within the first 3 months of their start date.</p>
+                <hr />
+                <h5>Level 3</h5>
+                <p><b>Who should attend:</b> All clinical staff working with children, young people and /or their parents/carers who could potentially contribute to assessing, planning, intervening and evaluating the needs of a child or young person and parenting capacity, where there are safeguarding / child protection concerns. This includes all mental health staff (Adult LMWS and CAMHS), child psychologists, child psychotherapists, adult learning disability staff, learning disability nurses, specialist nurses for safeguarding, looked after children¿s nurses, health professionals working in substance misuse services, youth offending team staff, paediatric allied health professionals, sexual health staff, school nurses, health visitors, all children¿s nurses, all paediatricians, child protection paediatric intensivists, paediatric orthodontists and dentists with lead role in child protection. Pharmacists undertaking professional care activities and services in care homes, urgent and emergency care settings, travel clinics, GP practices and out of hours services require level 3 competency</p>
+                <p><b>Learning Method:</b></p>
+                <ul>
+                  <li>(Part 1) eLearning - equivalent to Safeguarding Children Level 2 (1 hour, no renewal)</li>
+                  <li>(Part 2) Available via LSCP Website, access through this link: <a href="tewv.course.booking@nhs.net" traget="_blank">tewv.course.booking@nhs.net</a> (full day, no renewal)</li>
+                  <li> </li>
+                  <li>(Part 3) Available via LSCP Website, access through this link: <a href="tewv.course.booking@nhs.net" traget="_blank">tewv.course.booking@nhs.net</a> (2 hours, 3 yearly).</li>
+                </ul>
+                <p><b>Refresher Period:</b> 3 years</p>
+                <p><b>Additional Information:</b>All new staff should complete the eLearning module 833 Safeguarding Children Level 3 Part 1 and book onto the LSCP Working Together to Safeguard Children &amp; Young People within the first 3 months of their start date.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End of Sections -->
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- ======================================================
+=         NON-STATUTORY & MANDATORY TRAINING PAGE         =
+========================================================= -->
+  <div id="NSaMT" class="page">
+    <div class="row">
+      <div class="col">
+        <h4>Non Statutory and Mandatory Training</h4>
+        <p>This section provides access to Non Statutory and Manadatory courses you can book via ESR. The categories are listed below.</p>
+        <!--<button aria-expanded="false" class="btn btn-primary btn-block" onclick="showPage('SaMT');">Mandatory and Statutory Training</button>
+          <button aria-expanded="false" class="btn btn-primary btn-block" onclick="showPage('NSaMT');">Non Mandatory and Statutory Training</button>
+          <button aria-expanded="false" class="btn btn-primary btn-block" onclick="showPage('EPR');">EPR Training</button>-->
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md">
+        <!-- Trigger Button -->
+        <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#appraiserTrainingModal">
+          <h5>Appraiser Training
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="appraiserTrainingModal" tabindex="-1" aria-labelledby="appraiserTrainingModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Themed Header -->
+              <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                <h5 class="modal-title mb-0" id="appraiserTrainingModalLabel">Appraiser Training</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="card-body">
+                <p><b>Who should attend:</b></p>
+                <p><b>Learning Method:</b></p>
+                <p><b>Additional Information:</b></p>
+                <p><b>How to book: </b><a class="btn btn-primary" href="#" onclick="openPopup('');" role="button">BOOK NOW</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Trigger Button -->
+        <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#conflictResolutionModal">
+          <h5>Conflict Resolution - Conflict on the Telephone
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="conflictResolutionModal" tabindex="-1" aria-labelledby="conflictResolutionModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Themed Header -->
+              <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                <h5 class="modal-title mb-0" id="conflictResolutionModalLabel">Conflict Resolution – Conflict on the Telephone</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="card-body">
+                <p><b>Who should attend:</b></p>
+                <p><b>Learning Method:</b></p>
+                <p><b>Additional Information:</b></p>
+                <p><b>How to book: </b><a class="btn btn-primary" href="#" onclick="openPopup('https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&amp;resp_id=-1&amp;resp_appl_id=-1&amp;security_group_id=0&amp;lang_code=US&amp;oas=JyyRW4vQjsN6-_nj_Hpvdw..&amp;params=nnz04ZNXsNjDlFL.tETLczF4DoW50NkRXYglgHJC68zjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c');" role="button">BOOK NOW</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Trigger Button -->
+        <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#fallsTrainingModal">
+          <h5>Falls Training
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="fallsTrainingModal" tabindex="-1" aria-labelledby="fallsTrainingModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Themed Header -->
+              <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                <h5 class="modal-title mb-0" id="fallsTrainingModalLabel">Falls Training</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="card-body">
+                <p><b>Who should attend:</b></p>
+                <p><b>Learning Method:</b></p>
+                <p><b>Additional Information:</b></p>
+                <p><b>How to book: </b><a class="btn btn-primary" href="#" onclick="openPopup('https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&amp;resp_id=-1&amp;resp_appl_id=-1&amp;security_group_id=0&amp;lang_code=US&amp;oas=AOp_zqb5-QRqjlVHAFz08w..&amp;params=ThmbsjjVV4R.O5bZgP9MYkZcVt6eodBxg7Nyk40KuB7jqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c');" role="button">BOOK NOW</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Trigger Button -->
+        <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#hnaInductionModal">
+          <h5>Health Needs Assessment Induction
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="hnaInductionModal" tabindex="-1" aria-labelledby="hnaInductionModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Themed Header -->
+              <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                <h5 class="modal-title mb-0" id="hnaInductionModalLabel">Health Needs Assessment Induction</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="card-body">
+                <p><b>Who should attend:</b></p>
+                <p><b>Learning Method:</b></p>
+                <p><b>Additional Information:</b></p>
+                <p><b>How to book: </b><a class="btn btn-primary" href="#" onclick="openPopup('https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&amp;resp_id=-1&amp;resp_appl_id=-1&amp;security_group_id=0&amp;lang_code=US&amp;oas=JyyRW4vQjsN6-_nj_Hpvdw..&amp;params=-pOI.62.wqN2gLRuClua.-ClHNRrNglGEKWcmnZxGKTjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c');" role="button">BOOK NOW</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Trigger Button -->
+        <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#hnaRefresherModal">
+          <h5>Health Needs Assessment Refresher
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="hnaRefresherModal" tabindex="-1" aria-labelledby="hnaRefresherModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Themed Header -->
+              <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                <h5 class="modal-title mb-0" id="hnaRefresherModalLabel">Health Needs Assessment Refresher</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="card-body">
+                <p><b>Who should attend:</b></p>
+                <p><b>Learning Method:</b></p>
+                <p><b>Additional Information:</b></p>
+                <p><b>How to book: </b><a class="btn btn-primary" href="#" onclick="openPopup('https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&amp;resp_id=-1&amp;resp_appl_id=-1&amp;security_group_id=0&amp;lang_code=US&amp;oas=JyyRW4vQjsN6-_nj_Hpvdw..&amp;params=mAlPwLPeZRk9TKX9keJxm-htFcvLJoryrYs.R4ozCKjjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c');" role="button">BOOK NOW</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Trigger Button -->
+        <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#legUlcerModal">
+          <h5>Leg Ulcer Management
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="legUlcerModal" tabindex="-1" aria-labelledby="legUlcerModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Themed Header -->
+              <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                <h5 class="modal-title mb-0" id="legUlcerModalLabel">Leg Ulcer Management</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="card-body">
+                <p><b>Who should attend:</b></p>
+                <p><b>Learning Method:</b></p>
+                <p><b>Additional Information:</b></p>
+                <p><b>How to book: </b><a class="btn btn-primary" href="#" onclick="openPopup('https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&amp;resp_id=-1&amp;resp_appl_id=-1&amp;security_group_id=0&amp;lang_code=US&amp;oas=AOp_zqb5-QRqjlVHAFz08w..&amp;params=lN2.Ole8WWVi2hBVIs9VvyESNi.T8Yt-rh9N72gABIfjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c');" role="button">BOOK NOW</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Trigger Button -->
+        <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#childProtectionSupervisorModal">
+          <h5>Safeguarding Child Protection New Supervisor Training - Virtual
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="childProtectionSupervisorModal" tabindex="-1" aria-labelledby="childProtectionSupervisorModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Themed Header -->
+              <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                <h5 class="modal-title mb-0" id="childProtectionSupervisorModalLabel">
+                  Safeguarding Child Protection New Supervisor Training – Virtual
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="card-body">
+                <p><b>Who should attend:</b></p>
+                <p><b>Learning Method:</b></p>
+                <p><b>Additional Information:</b></p>
+                <p><b>How to book: </b><a class="btn btn-primary" href="#" onclick="openPopup('https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&amp;resp_id=-1&amp;resp_appl_id=-1&amp;security_group_id=0&amp;lang_code=US&amp;oas=AOp_zqb5-QRqjlVHAFz08w..&amp;params=kZEI-MTFsnQD3j5AIUBqb8UCaxu85A4pt.tU-UvfisTjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c');" role="button">BOOK NOW</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Trigger Button -->
+        <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#safeguardingSpecialistModal">
+          <h5>Safeguarding Specialist Courses / Safeguarding 60 Minute Update Virtual
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="safeguardingSpecialistModal" tabindex="-1" aria-labelledby="safeguardingSpecialistModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Themed Header -->
+              <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                <h5 class="modal-title mb-0" id="safeguardingSpecialistModalLabel">
+                  Safeguarding Specialist Courses / Safeguarding 60 Minute Update Virtual
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="card-body">
+                <p><b>Who should attend:</b></p>
+                <p><b>Learning Method:</b></p>
+                <p><b>Additional Information:</b></p>
+                <p><b>How to book: </b><a class="btn btn-primary" href="#" onclick="openPopup('https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&amp;resp_id=-1&amp;resp_appl_id=-1&amp;security_group_id=0&amp;lang_code=US&amp;oas=JyyRW4vQjsN6-_nj_Hpvdw..&amp;params=49NjuDi.NrFLeW2FR4keW2fYeJ..NWOIYUiy0Fmma9Pjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c');" role="button">BOOK NOW</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Trigger Button -->
+        <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#supervisionModal">
+          <h5>Safeguarding Children - Supervision of Supervisors
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="supervisionModal" tabindex="-1" aria-labelledby="supervisionModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Themed Header -->
+              <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                <h5 class="modal-title mb-0" id="supervisionModalLabel">Safeguarding Children – Supervision of Supervisors</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="card-body">
+                <p><b>Who should attend:</b></p>
+                <p><b>Learning Method:</b></p>
+                <p><b>Additional Information:</b></p>
+                <p><b>How to book: </b><a class="btn btn-primary" href="#" onclick="openPopup('https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&amp;resp_id=-1&amp;resp_appl_id=-1&amp;security_group_id=0&amp;lang_code=US&amp;oas=AOp_zqb5-QRqjlVHAFz08w..&amp;params=kZEI-MTFsnQD3j5AIUBqb8UCaxu85A4pt.tU-UvfisTjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c');" role="button">BOOK NOW</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Trigger Button -->
+        <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#woundCareModal">
+          <h5>Wound Care Study Day
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="woundCareModal" tabindex="-1" aria-labelledby="woundCareModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Themed Header -->
+              <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                <h5 class="modal-title mb-0" id="woundCareModalLabel">Wound Care Study Day</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="card-body">
+                <p><b>Who should attend:</b></p>
+                <p><b>Learning Method:</b></p>
+                <p><b>Additional Information:</b></p>
+                <p><b>How to book: </b><a class="btn btn-primary" href="#" onclick="openPopup('https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&amp;resp_id=-1&amp;resp_appl_id=-1&amp;security_group_id=0&amp;lang_code=US&amp;oas=AOp_zqb5-QRqjlVHAFz08w..&amp;params=.KjIJSsiBQ0oDJKH1lVtaEv3lEJ62d2fwAED6zaPhprjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c');" role="button">BOOK NOW</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <h5>LEAD Courses</h5>
+        <p>You can book on these courses via the Event system.</p>
+        <!-- Trigger Button -->
+        <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#difficultConversationsModal">
+          <h5>Difficult Conversations Training
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="difficultConversationsModal" tabindex="-1" aria-labelledby="difficultConversationsModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Themed Header -->
+              <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                <h5 class="modal-title mb-0" id="difficultConversationsModalLabel">Difficult Conversations Training</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="card-body">
+                <p><b>Who should attend:</b></p>
+                <p><b>Learning Method:</b></p>
+                <p><b>Additional Information:</b></p>
+                <p><b>How to book: </b><a class="btn btn-primary" href="#" onclick="openPopup('https://lch.oak.com/Content/Page/Index/0775f08a-5792-4fd3-a511-d85bacf74d80?forceApprovalStatus=False&amp;reviewComplete=False');" role="button">BOOK NOW</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trigger Button -->
+        <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#leadershipModal">
+          <h5>Compassionate and Courageous Leadership
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="leadershipModal" tabindex="-1" aria-labelledby="leadershipModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Themed Header -->
+              <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                <h5 class="modal-title mb-0" id="leadershipModalLabel">Compassionate and Courageous Leadership</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="card-body">
+                <p><b>Who should attend:</b></p>
+                <p><b>Learning Method:</b></p>
+                <p><b>Additional Information:</b></p>
+                <p><b>How to book: </b><a class="btn btn-primary" href="#" onclick="openPopup('https://lch.oak.com/Content/Page/Index/0775f08a-5792-4fd3-a511-d85bacf74d80?AforceApprovalStatus=False&amp;reviewComplete=False');" role="button">BOOK NOW</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Trigger Button -->
+        <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#managerCoachModal">
+          <h5> Manager as Coach
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="managerCoachModal" tabindex="-1" aria-labelledby="managerCoachModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Themed Header -->
+              <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                <h5 class="modal-title mb-0" id="managerCoachModalLabel">Manager as Coach</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="card-body">
+                <p><b>Who should attend:</b></p>
+                <p><b>Learning Method:</b></p>
+                <p><b>Additional Information:</b></p>
+                <p><b>How to book: </b><a class="btn btn-primary" href="#" onclick="openPopup('https://lch.oak.com/Content/Page/Index/0775f08a-5792-4fd3-a511-d85bacf74d80?forceApprovalStatus=False&amp;reviewComplete=False');" role="button">BOOK NOW</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Trigger Button -->
+        <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#qiModal">
+          <h5>Introduction To Quality Improvement (QI)
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="qiModal" tabindex="-1" aria-labelledby="qiModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Themed Header -->
+              <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                <h5 class="modal-title mb-0" id="qiModalLabel">Introduction to Quality Improvement (QI)</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="card-body">
+                <p><b>Who should attend:</b></p>
+                <p><b>Learning Method:</b></p>
+                <p><b>Additional Information:</b></p>
+                <p><b>How to book: </b><a class="btn btn-primary" href="#" onclick="openPopup('https://lch.oak.com/Content/Page/Index/0775f08a-5792-4fd3-a511-d85bacf74d80?forceApprovalStatus=False&amp;reviewComplete=False');" role="button">BOOK NOW</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End of Sections -->
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- ======================================================
+=                Medical Education PAGE                   =
+========================================================= -->
+  <div id="ME" class="page">
+    <div class="row">
+      <div class="col">
+        <h4>Medical Education</h4>
+        <p>This section provides access to Medical Education events you can book via ESR. The categories are listed below.</p>
+        <!--<button aria-expanded="false" class="btn btn-primary btn-block" onclick="showPage('SaMT');">Mandatory and Statutory Training</button>
+          <button aria-expanded="false" class="btn btn-primary btn-block" onclick="showPage('NSaMT');">Non Mandatory and Statutory Training</button>
+          <button aria-expanded="false" class="btn btn-primary btn-block" onclick="showPage('EPR');">EPR Training</button>-->
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md">
+        <!-- Trigger Button -->
+        <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#ME1Modal">
+          <h5>Medical Managers Programme</h5>
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="ME1Modal" tabindex="-1" aria-labelledby="ME1ModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Themed Header -->
+              <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                <h5 class="modal-title mb-0" id="appraiserTrainingModalLabel">Medical Managers Programme</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="card-body">
+                <p><b>Who should attend:</b></p>
+                <p><b>Learning Method:</b></p>
+                <p><b>Additional Information:</b></p>
+                <p><b>How to book: </b><a class="btn btn-primary" href="#" onclick="openPopup('https://my-epro.esr.nhs.uk/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&oas=kqoxsXSp5JQZu730GjA0cw..&params=r0B7RhRpTCh0jw99MlJLry7Kv5Tog2OeRKz4JulWS0Xjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c');" role="button">BOOK NOW</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Trigger Button -->
+        <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#ME2Modal">
+          <h5>Grand Round - South</h5>
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="ME2Modal" tabindex="-1" aria-labelledby="ME2Label" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Themed Header -->
+              <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                <h5 class="modal-title mb-0" id="conflictResolutionModalLabel">Grand Round - South</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="card-body">
+                <p><b>Who should attend:</b></p>
+                <p><b>Learning Method:</b></p>
+                <p><b>Additional Information:</b></p>
+                <p><b>How to book: </b><a class="btn btn-primary" href="#" onclick="openPopup('https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&amp;resp_id=-1&amp;resp_appl_id=-1&amp;security_group_id=0&amp;lang_code=US&amp;oas=JyyRW4vQjsN6-_nj_Hpvdw..&amp;params=nnz04ZNXsNjDlFL.tETLczF4DoW50NkRXYglgHJC68zjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c');" role="button">BOOK NOW</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End of Sections -->
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- ======================================================
+=                     SUPPORT REQUEST SECTION                 =
+========================================================= 
+  <div id="SUP" class="page">
+    <div class="container">
+      <!--Alternate placng for banner-wrapper
+      <div class="row">
+        <div class="col-md-4 gradient-col d-flex align-items-center justify-content-center">
+          <h3 class="gradient-text">Support Request</h3>
+        </div>
+        <div class="col-md-8">
+          <h4>ESR Learning Management Support Request</h4>
+          <p>If this site does not give you the advice and support you need please fill in the form below and one of our support team will be in touch soon.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md">
+          <div class="ratio ratio-4x3" style="max-width: 100%;">
+            <iframe src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAa__eBfvaBUOU4zQ0wzV1lVOFkxM05SUk8yVkNBM1BWVS4u&embed=true" allowfullscreen style="border: none;"></iframe>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+-->
+</body>
+
+</html>
