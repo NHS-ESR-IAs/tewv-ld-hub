@@ -1,6 +1,10 @@
 /* ============================================================
    GLOBAL SETTINGS & TYPOGRAPHY
 ============================================================ */
+html {
+  scrollbar-gutter: stable;
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
@@ -23,11 +27,32 @@ body.scale-xlarge .btn-primary {
   font-size: 1.3rem;
 }
 
+
+
+
 /* ============================================================
    NAVIGATION
 ============================================================ */
+
+.tewv-logo {
+  max-width: 220px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .tewv-logo {
+    max-width: 140px;
+  }
+}
+
+.logo-bar {
+  background-color: transparent;
+  z-index: 10;
+  position: relative;
+}
+
 .navbar {
-  background-color: #0072ce;
+  background-color: #005eb8;
 }
 
 .navbar-toggler-icon {
@@ -50,6 +75,17 @@ body.scale-xlarge .btn-primary {
   font-weight: bold;
   margin-left: 10px;
   float: right;
+}
+
+.navbar a {
+  cursor: pointer;
+}
+
+
+.search-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 0px;
 }
 
 /* ============================================================
@@ -935,3 +971,67 @@ body.dark-mode .control-toolbar {
     opacity: 0;
   }
 }
+
+
+
+
+.btn.btn-primary.w-100.text-start.mb-2 {
+  background-color: #ffffff;           /* White background */
+  color: #000000;                      /* Black text */
+  border: none;                        /* Remove all borders */
+  border-left: 5px solid #c0b6d4;      /* Purple-ish vertical accent bar */
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: left;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* Soft shadow for lift */
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+
+
+.btn.btn-primary.w-100.text-start.mb-2:hover {
+  background-color: #f2f2f2;           /* Soft grey on hover */
+  border-left-color: #005ea5;         /* Darker NHS Blue on hover */
+}
+
+.TEWV-modal {
+  border-left: 5px solid #c0b6d4;       /* LD purple accent */
+  /*background-color: #ffffff;            Clean white modal background */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  padding: 5;                          /* Padding lives in child elements */
+}
+
+
+.TEWV-header {
+  background-color: #ffffff;         /* White background */
+  color: #000000;                    /* Black text */
+  /* border-left: 5px solid #c0b6d4;    NHS Blue accent stripe */
+  padding: 1rem 1.25rem;
+  font-weight: 600;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: subtle depth */
+}
+
+.btn-close {
+  filter: invert(28%) sepia(78%) saturate(3182%) hue-rotate(186deg) brightness(90%) contrast(97%);
+}
+
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.2); /* Lighter overlay */
+}
+
+/*.modal-backdrop {
+  background-color: rgba(0, 114, 206, 0.15); /* Soft NHS-blue overlay */
+}
+
+
+
+/*
+
+<div class="modal-content TEWV-modal">
+
+<div class="modal-header TEWV-header d-flex justify-content-between align-items-center">
