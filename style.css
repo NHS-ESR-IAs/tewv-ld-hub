@@ -35,10 +35,37 @@ body.scale-xlarge .btn-primary {
 ============================================================ */
 
 .tewv-logo {
-  max-width: 220px;
+  max-width: 240px;
   height: auto;
 }
+.logo-bar {
+    position: relative;
+    height: 80px; /* adjust height as needed */
+    padding: 0.5rem 1rem;
+    background-color: #222; /* for visibility */
+  }
 
+  .left-logo {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .center-heading {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+
+
+  .logo-bar h1 {
+    margin: 0;
+    color: white;
+  }
 @media (max-width: 768px) {
   .tewv-logo {
     max-width: 140px;
